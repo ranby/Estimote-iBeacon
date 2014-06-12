@@ -21,6 +21,10 @@
 		A06313011945A06A0002F500 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06312E31945A06A0002F500 /* UIKit.framework */; };
 		A06313091945A06A0002F500 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A06313071945A06A0002F500 /* InfoPlist.strings */; };
 		A063130B1945A06A0002F500 /* Estimote_iBeaconTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A063130A1945A06A0002F500 /* Estimote_iBeaconTests.m */; };
+		A06313151945A0840002F500 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06313141945A0840002F500 /* CoreLocation.framework */; };
+		A06313171945A08E0002F500 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06313161945A08E0002F500 /* SystemConfiguration.framework */; };
+		A06313191945A0CB0002F500 /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A06313181945A0CB0002F500 /* libEstimoteSDK.a */; };
+		A063131C1945A8510002F500 /* TimesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A063131B1945A8510002F500 /* TimesTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,11 @@
 		A06313061945A06A0002F500 /* Estimote-iBeaconTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Estimote-iBeaconTests-Info.plist"; sourceTree = "<group>"; };
 		A06313081945A06A0002F500 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A063130A1945A06A0002F500 /* Estimote_iBeaconTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Estimote_iBeaconTests.m; sourceTree = "<group>"; };
+		A06313141945A0840002F500 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A06313161945A08E0002F500 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A06313181945A0CB0002F500 /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEstimoteSDK.a; path = "Estimote-iBeacon/EstimoteSDK/libEstimoteSDK.a"; sourceTree = "<group>"; };
+		A063131A1945A8510002F500 /* TimesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimesTableViewController.h; sourceTree = "<group>"; };
+		A063131B1945A8510002F500 /* TimesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimesTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +69,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A06313191945A0CB0002F500 /* libEstimoteSDK.a in Frameworks */,
+				A06313171945A08E0002F500 /* SystemConfiguration.framework in Frameworks */,
+				A06313151945A0840002F500 /* CoreLocation.framework in Frameworks */,
 				A06312E21945A06A0002F500 /* CoreGraphics.framework in Frameworks */,
 				A06312E41945A06A0002F500 /* UIKit.framework in Frameworks */,
 				A06312E01945A06A0002F500 /* Foundation.framework in Frameworks */,
@@ -101,6 +113,9 @@
 		A06312DE1945A06A0002F500 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A06313181945A0CB0002F500 /* libEstimoteSDK.a */,
+				A06313161945A08E0002F500 /* SystemConfiguration.framework */,
+				A06313141945A0840002F500 /* CoreLocation.framework */,
 				A06312DF1945A06A0002F500 /* Foundation.framework */,
 				A06312E11945A06A0002F500 /* CoreGraphics.framework */,
 				A06312E31945A06A0002F500 /* UIKit.framework */,
@@ -117,6 +132,8 @@
 				A06312F11945A06A0002F500 /* Main.storyboard */,
 				A06312F41945A06A0002F500 /* ViewController.h */,
 				A06312F51945A06A0002F500 /* ViewController.m */,
+				A063131A1945A8510002F500 /* TimesTableViewController.h */,
+				A063131B1945A8510002F500 /* TimesTableViewController.m */,
 				A06312F71945A06A0002F500 /* Images.xcassets */,
 				A06312E61945A06A0002F500 /* Supporting Files */,
 			);
@@ -199,6 +216,13 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Dewire;
 				TargetAttributes = {
+					A06312DB1945A06A0002F500 = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
+					};
 					A06312FC1945A06A0002F500 = {
 						TestTargetID = A06312DB1945A06A0002F500;
 					};
@@ -251,6 +275,7 @@
 			files = (
 				A06312F61945A06A0002F500 /* ViewController.m in Sources */,
 				A06312F01945A06A0002F500 /* AppDelegate.m in Sources */,
+				A063131C1945A8510002F500 /* TimesTableViewController.m in Sources */,
 				A06312EC1945A06A0002F500 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,7 +403,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Estimote-iBeacon/Estimote-iBeacon-Prefix.pch";
+				"HEADER_SEARCH_PATHS[arch=*]" = "/Users/ERAN/Projects/Estimote-iBeacon/Estimote-iBeacon/EstimoteSDK/Headers";
 				INFOPLIST_FILE = "Estimote-iBeacon/Estimote-iBeacon-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Estimote-iBeacon/EstimoteSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -391,7 +422,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Estimote-iBeacon/Estimote-iBeacon-Prefix.pch";
+				"HEADER_SEARCH_PATHS[arch=*]" = "/Users/ERAN/Projects/Estimote-iBeacon/Estimote-iBeacon/EstimoteSDK/Headers";
 				INFOPLIST_FILE = "Estimote-iBeacon/Estimote-iBeacon-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Estimote-iBeacon/EstimoteSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

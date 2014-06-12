@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import "EstimoteSDK/Headers/ESTBeaconManager.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <ESTBeaconManagerDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *beaconInfoLabel;
+@property (weak, nonatomic) IBOutlet UILabel *rssiLabel;
 
 @end
